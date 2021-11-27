@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { StyledShop } from "./Styles/Shop.styled";
 
 const Shop = () => {
   useEffect(() => {
@@ -17,7 +18,7 @@ const Shop = () => {
   };
 
   return (
-    <div>
+    <StyledShop>
       <img
         src={items[0].image}
         width="100px"
@@ -25,7 +26,7 @@ const Shop = () => {
         style={{ objectFit: "cover" }}
         alt=""
       />
-    </div>
+    </StyledShop>
   );
 };
 
