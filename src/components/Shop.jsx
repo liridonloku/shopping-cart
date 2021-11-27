@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Card from "./Card";
 import { StyledShop } from "./Styles/Shop.styled";
 
 const Shop = () => {
@@ -19,13 +20,9 @@ const Shop = () => {
 
   return (
     <StyledShop>
-      <img
-        src={items[0].image}
-        width="100px"
-        height="100px"
-        style={{ objectFit: "cover" }}
-        alt=""
-      />
+      {items.map((item) => {
+        return <Card item={item} key={item.id} />;
+      })}
     </StyledShop>
   );
 };
