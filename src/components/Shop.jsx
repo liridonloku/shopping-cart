@@ -4,11 +4,11 @@ import Card from "./Card";
 import { StyledShop } from "./Styles/Shop.styled";
 
 const Shop = () => {
+  const [items, setItems] = useState([""]);
+
   useEffect(() => {
     fetchProducts();
   }, []);
-
-  const [items, setItems] = useState([""]);
 
   const fetchProducts = async () => {
     const response = await fetch("https://fakestoreapi.com/products");
@@ -20,9 +20,19 @@ const Shop = () => {
 
   return (
     <StyledShop>
-      {items.map((item) => {
-        return <Card item={item} key={item.id} />;
-      })}
+      {items ? (
+        items.map((item) => {
+          return (
+            <Card
+              item={item}
+              key={item.id || "0"}
+              rating={item.rating || "0.00"}
+            />
+          );
+        })
+      ) : (
+        <div></div>
+      )}
     </StyledShop>
   );
 };
