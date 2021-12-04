@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StyledCard = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 24%;
   height: 400px;
   padding: 5px;
@@ -10,12 +12,13 @@ export const StyledCard = styled.div`
   margin-bottom: 15px;
 
   & .image-container {
-    height: 70%;
+    min-height: 70%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 5px;
+    flex: 1 1 auto;
   }
 
   & div > img {
@@ -28,13 +31,12 @@ export const StyledCard = styled.div`
   & .title {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     text-align: center;
-    max-height: 60px;
     cursor: pointer;
     word-break: break-word;
     margin-bottom: 5px;
-    overflow-y: hidden;
+    flex: 1 1 auto
   }
 
   & .title:hover {
