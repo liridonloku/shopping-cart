@@ -2,6 +2,7 @@ import React from "react";
 import { StyledItem } from "./Styles/Item.styled";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { FaStar } from "react-icons/fa";
 
 //Single item page
 const Item = () => {
@@ -29,8 +30,12 @@ const Item = () => {
             <img src={item.image} alt={item.title} />
           </div>
           <div className="content">
-            <div className="title">{item.title}</div>
-            <div className="description">{item.description}</div>
+            <p className="title">{item.title}</p>
+            <p className="description">{item.description}</p>
+            <p className="rating">
+              Rating: {item.rating.rate}
+              <FaStar /> ({item.rating.count} votes)
+            </p>
 
             <div className="add">
               <label htmlFor="quantity">Quantity: </label>
@@ -39,7 +44,7 @@ const Item = () => {
             </div>
             <div className="price-container">
               <p>Price:</p>
-              <div className="price">US ${item.price}</div>
+              <p className="price">US ${item.price}</p>
             </div>
           </div>
         </div>

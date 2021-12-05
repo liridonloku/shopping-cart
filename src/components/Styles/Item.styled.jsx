@@ -41,6 +41,17 @@ export const StyledItem = styled.div`
     margin-bottom: 15px;
   }
 
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .rating > svg {
+    margin: 0 3px;
+    color: orange;
+  }
+
   .add {
     margin-bottom: 20px;
   }
