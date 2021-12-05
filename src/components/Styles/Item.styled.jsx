@@ -19,12 +19,14 @@ export const StyledItem = styled.div`
   }
 
   img {
+    padding: 5px;
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
   }
 
   .content {
+    margin-left: 20px;
     padding: 5px;
   }
 
@@ -74,5 +76,20 @@ export const StyledItem = styled.div`
     margin-left: 10px;
     margin-bottom: 15px;
     color: #111820de;
+  }
+
+  @media (max-width: 450px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-container {
+      width: 50%;
+    }
+
+    input {
+      margin-bottom: 5px;
+    }
   }
 `;

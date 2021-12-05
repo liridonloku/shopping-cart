@@ -23,25 +23,29 @@ const Item = () => {
 
   return (
     <StyledItem>
-      <div className="container">
-        <div className="image-container">
-          <img src={item.image} alt={item.title} />
-        </div>
-        <div className="content">
-          <div className="title">{item.title}</div>
-          <div className="description">{item.description}</div>
+      {item.title ? (
+        <div className="container">
+          <div className="image-container">
+            <img src={item.image} alt={item.title} />
+          </div>
+          <div className="content">
+            <div className="title">{item.title}</div>
+            <div className="description">{item.description}</div>
 
-          <div className="add">
-            <label htmlFor="quantity">Quantity: </label>
-            <input type="number" id="quantity" />
-            <button>Add to Cart</button>
-          </div>
-          <div className="price-container">
-            <p>Price:</p>
-            <div className="price">US ${item.price}</div>
+            <div className="add">
+              <label htmlFor="quantity">Quantity: </label>
+              <input type="number" id="quantity" />
+              <button>Add to Cart</button>
+            </div>
+            <div className="price-container">
+              <p>Price:</p>
+              <div className="price">US ${item.price}</div>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div></div>
+      )}
     </StyledItem>
   );
 };
