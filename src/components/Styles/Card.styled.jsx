@@ -36,7 +36,12 @@ export const StyledCard = styled.div`
     cursor: pointer;
     word-break: break-word;
     margin-bottom: 5px;
-    flex: 1 1 auto
+    flex: 1 1 auto;
+  }
+
+  & .title > a {
+    text-decoration: none;
+    color: black;
   }
 
   & .title:hover {

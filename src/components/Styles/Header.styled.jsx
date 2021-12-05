@@ -2,7 +2,12 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   min-height: 40px;
-  background-color: #e5f4e3;
+  background: rgb(93, 169, 233);
+  background: linear-gradient(
+    180deg,
+    rgba(93, 169, 233, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
   color: #6d326d;
   display: flex;
   align-items: center;
