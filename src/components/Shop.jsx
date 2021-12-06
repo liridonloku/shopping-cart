@@ -20,7 +20,7 @@ const Shop = () => {
 
   return (
     <StyledShop>
-      {items.length>1 ? (
+      {items.length > 1 ? (
         items.map((item) => {
           return (
             <Card

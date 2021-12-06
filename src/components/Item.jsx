@@ -5,7 +5,7 @@ import { useParams } from "react-router";
 import { FaStar } from "react-icons/fa";
 
 //Single item page
-const Item = () => {
+const Item = (props) => {
   const { id } = useParams();
 
   useEffect(() => {
@@ -40,7 +40,15 @@ const Item = () => {
             <div className="add">
               <label htmlFor="quantity">Quantity: </label>
               <input type="number" id="quantity" />
-              <button>Add to Cart</button>
+              <button
+                onClick={() => {
+                  let id = item.id;
+                  let quantity = document.getElementById("quantity").value;
+                  props.addToCart(id, parseInt(quantity));
+                }}
+              >
+                Add to Cart
+              </button>
             </div>
             <div className="price-container">
               <p>Price:</p>
