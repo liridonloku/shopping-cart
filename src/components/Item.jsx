@@ -42,9 +42,16 @@ const Item = (props) => {
               <input type="number" id="quantity" />
               <button
                 onClick={() => {
-                  let id = item.id;
-                  let quantity = document.getElementById("quantity").value;
-                  props.addToCart(id, parseInt(quantity));
+                  let quantity = parseInt(
+                    document.getElementById("quantity").value
+                  );
+                  props.addToCart(
+                    item.id,
+                    item.title,
+                    item.image,
+                    item.price,
+                    quantity
+                  );
                 }}
               >
                 Add to Cart
