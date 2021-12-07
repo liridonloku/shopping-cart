@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import Home from "./Home";
 import Shop from "./Shop";
+import Cart from "./Cart";
 import { StyledHeader } from "./Styles/Header.styled";
 
 const Header = () => {
@@ -16,7 +17,9 @@ const Header = () => {
         <Link to="/shop" element={<Shop />}>
           Shop
         </Link>
-        <FaShoppingCart color="#003F91" />
+        <Link to="/cart" element={<Cart />}>
+          <FaShoppingCart color="#003F91" />
+        </Link>
       </nav>
     </StyledHeader>
   );
