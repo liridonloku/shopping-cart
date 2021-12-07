@@ -39,7 +39,16 @@ const Item = (props) => {
 
             <div className="add">
               <label htmlFor="quantity">Quantity: </label>
-              <input type="number" id="quantity" />
+              <input
+                type="number"
+                id="quantity"
+                onInput={() => {
+                  const input = document.getElementById("quantity");
+                  input.value = input.value
+                    .replace(/[^0-9.]/g, "")
+                    .replace(/(\..*)\./g, "$1");
+                }}
+              />
               <button
                 onClick={() => {
                   let quantity = parseInt(
