@@ -74,7 +74,6 @@ export const StyledItem = styled.div`
     background-color: #003f91;
     color: #ffffff;
     border-radius: 20px;
-    transition: 200ms;
   }
 
   button: hover {
@@ -82,7 +81,7 @@ export const StyledItem = styled.div`
   }
 
   button: active {
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
 
   .price-container {

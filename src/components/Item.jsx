@@ -9,11 +9,9 @@ const Item = (props) => {
   const { id } = useParams();
 
   useEffect(() => {
-    console.log(id);
     const fetchProduct = async () => {
       const response = await fetch(`https://fakestoreapi.com/products/${id}`);
       const product = await response.json();
-      console.log(product);
       setItem(product);
       return product;
     };

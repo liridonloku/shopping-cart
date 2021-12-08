@@ -4,6 +4,7 @@ export const StyledCartItem = styled.div`
   display: flex;
   align-items: center;
   min-width: 540px;
+  height: 172px;
 
   .image-container {
     width: 20%;
@@ -68,6 +69,7 @@ export const StyledCartItem = styled.div`
     justify-content: center;
     align-items: center;
     cursor: default;
+    user-select: none;
   }
 
   .sign:hover {

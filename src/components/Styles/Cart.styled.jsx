@@ -98,6 +98,7 @@ export const StyledCart = styled.div`
   }
 
   .summary-content {
+    max-height: 400px;
     display: flex;
     color: #6d326d;
     flex-grow: 1;
@@ -147,7 +148,6 @@ export const StyledCart = styled.div`
     border-radius: 20px;
     margin-top: 10px;
     width: 100%;
-    transition: 200ms;
   }
 
   button: hover {
@@ -155,7 +155,7 @@ export const StyledCart = styled.div`
   }
 
   button: active {
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
 
   @media (max-width: 800px) {

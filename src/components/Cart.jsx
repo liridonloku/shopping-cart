@@ -2,7 +2,7 @@ import React from "react";
 import { StyledCart } from "./Styles/Cart.styled";
 import CartItem from "./CartItem";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, changeQuantity, removeFromCart }) => {
   let quantity = 0;
   let total = 0;
   cart.forEach((element) => {
@@ -11,7 +11,14 @@ const Cart = ({ cart }) => {
   });
 
   const render = cart.map((item) => {
-    return <CartItem item={item} key={item.id} />;
+    return (
+      <CartItem
+        item={item}
+        key={item.id}
+        changeQuantity={changeQuantity}
+        removeFromCart={removeFromCart}
+      />
+    );
   });
 
   return (
@@ -37,7 +44,7 @@ const Cart = ({ cart }) => {
           <div className="summary-content">
             <div className="summary-items">
               <h4>ITEMS {quantity}</h4>
-              <h4>${total}</h4>
+              <h4>${parseFloat(total).toFixed(2)}</h4>
             </div>
             <div className="summary-shipping">
               <h4>Shipping</h4>
@@ -46,7 +53,7 @@ const Cart = ({ cart }) => {
             <div className="summary-checkout">
               <div className="summary-total">
                 <h4>Total cost</h4>
-                <h4>${total}</h4>
+                <h4>${parseFloat(total).toFixed(2)}</h4>
               </div>
               <button>Checkout</button>
             </div>

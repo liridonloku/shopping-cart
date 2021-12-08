@@ -39,6 +39,28 @@ const App = () => {
     setCart(newCart);
   };
 
+  const changeQuantity = (id, quantity) => {
+    let newCart = cart.map((item) => {
+      if (item.id === id) {
+        return {
+          id,
+          title: item.title,
+          image: item.image,
+          price: item.price,
+          quantity,
+        };
+      } else {
+        return item;
+      }
+    });
+    setCart(newCart);
+  };
+
+  const removeFromCart = (id) => {
+    let newCart = cart.filter((item) => item.id !== id);
+    setCart(newCart);
+  };
+
   return (
     <BrowserRouter>
       <Header />
@@ -46,7 +68,16 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop/:id" element={<Item addToCart={addToCart} />} />
-        <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              cart={cart}
+              changeQuantity={changeQuantity}
+              removeFromCart={removeFromCart}
+            />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
