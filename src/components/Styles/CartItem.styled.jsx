@@ -37,15 +37,15 @@ export const StyledCartItem = styled.div`
 
   .quantity {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 15%;
-    padding-right: 5px;
   }
 
   input {
     padding: 0 2px;
     margin: 0 5px;
-    width: 50%;
+    width: 40%;
     height: 30%;
   }
 
@@ -62,7 +62,8 @@ export const StyledCartItem = styled.div`
   }
 
   .sign {
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;

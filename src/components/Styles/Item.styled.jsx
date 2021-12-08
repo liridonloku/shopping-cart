@@ -74,6 +74,15 @@ export const StyledItem = styled.div`
     background-color: #003f91;
     color: #ffffff;
     border-radius: 20px;
+    transition: 200ms;
+  }
+
+  button: hover {
+    background-color: #002e6b;
+  }
+
+  button: active {
+    transform: scale(0.9);
   }
 
   .price-container {
