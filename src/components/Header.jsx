@@ -6,10 +6,19 @@ import Shop from "./Shop";
 import Cart from "./Cart";
 import { StyledHeader } from "./Styles/Header.styled";
 
-const Header = () => {
+const Header = ({ cart }) => {
+  let quantity = 0;
+  cart.forEach((element) => {
+    quantity += element.quantity;
+  });
+
   return (
     <StyledHeader>
-      <h1>Fake Shop</h1>
+      <h1>
+        <Link to="/" element={<Home />}>
+          Fake Shop
+        </Link>
+      </h1>
       <nav>
         <Link to="/" element={<Home />}>
           Home
@@ -18,7 +27,8 @@ const Header = () => {
           Shop
         </Link>
         <Link to="/cart" element={<Cart />}>
-          <FaShoppingCart color="#003F91" />
+          <FaShoppingCart color="#003F91" />{" "}
+          {quantity > 0 ? <div>({quantity})</div> : <div></div>}
         </Link>
       </nav>
     </StyledHeader>

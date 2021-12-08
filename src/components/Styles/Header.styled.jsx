@@ -15,13 +15,19 @@ export const StyledHeader = styled.header`
   margin-bottom: 10px;
   justify-content: space-between;
 
-  & nav {
+  h1 > a {
+    text-decoration: none;
+  }
+
+  nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
 
-  & nav > a {
+  nav > a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     margin-right: 15px;
   }
