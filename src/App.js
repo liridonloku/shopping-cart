@@ -66,7 +66,7 @@ const App = () => {
   };
 
   return (
-    <HashRouter>
+    <HashRouter basename="/shopping-cart">
       <Header cart={cart} />
       <Routes>
         <Route path="/" element={<Home />} />
