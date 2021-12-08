@@ -7,11 +7,15 @@ import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Item from "./components/Item";
 import Cart from "./components/Cart";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (id, title, image, price, quantity) => {
+    if (isNaN(quantity)) {
+      return;
+    }
     let newCart;
     if (cart.some((item) => item.id === id)) {
       newCart = cart.map((item) => {
@@ -79,6 +83,7 @@ const App = () => {
           }
         />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

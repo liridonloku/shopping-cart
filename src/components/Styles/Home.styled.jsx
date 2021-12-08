@@ -2,9 +2,15 @@ import styled from "styled-components";
 
 export const StyledHome = styled.div`
   display: flex;
+  align-items: center;
   justify-content: center;
+  min-height: calc(100vh - 120px);
 
   .container {
+    flex-basis: 1200px;
+    height: 80%;
+    max-height: 500px;
+    max-width: 1200px;
     display: flex;
   }
 
@@ -17,13 +23,13 @@ export const StyledHome = styled.div`
   }
 
   button {
-    padding: 10px 30px;
+    padding: 20px 60px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 24px;
     border: none;
     background-color: #003f91;
     color: #ffffff;
-    border-radius: 20px;
+    border-radius: 30px;
     margin-top: 10px;
     cursor: pointer;
   }
@@ -34,6 +40,11 @@ export const StyledHome = styled.div`
 
   button: active {
     transform: scale(0.95);
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
   }
 
   .right {

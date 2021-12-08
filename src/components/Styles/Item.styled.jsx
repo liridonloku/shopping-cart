@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const StyledItem = styled.div`
   display: flex;
   justify-content: center;
+  min-height: calc(100vh - 120px);
 
   .container {
     display: flex;
+    width: 97vw;
     max-width: 900px;
     border: 1px solid #e5e5e5;
   }
@@ -14,7 +16,7 @@ export const StyledItem = styled.div`
     width: 40%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-shrink: 0;
   }
 

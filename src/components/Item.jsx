@@ -40,6 +40,7 @@ const Item = (props) => {
               <input
                 type="number"
                 id="quantity"
+                defaultValue="1"
                 onInput={() => {
                   const input = document.getElementById("quantity");
                   input.value = input.value

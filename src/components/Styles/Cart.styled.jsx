@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledCart = styled.div`
   display: flex;
+  min-height: calc(100vh - 120px);
   justify-content: center;
 
   .container {
@@ -39,6 +40,7 @@ export const StyledCart = styled.div`
 
   .items-descriptions {
     margin-top: 20px;
+    margin-bottom: 10px;
     width: 100%;
     min-width: 540px;
     display: flex;
