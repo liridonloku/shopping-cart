@@ -30,6 +30,11 @@ export const StyledCartItem = styled.div`
     font-weight: bold;
   }
 
+  .title > a {
+    text-decoration: none;
+    color: black;
+  }
+
   .remove {
     color: darkgrey;
     cursor: pointer;

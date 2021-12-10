@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { StyledCartItem } from "./Styles/CartItem.styled";
 
 const CartItem = ({ item, changeQuantity, removeFromCart }) => {
@@ -8,7 +9,9 @@ const CartItem = ({ item, changeQuantity, removeFromCart }) => {
         <img src={item.image} alt={item.title} />
       </div>
       <div className="description">
-        <p className="title">{item.title}</p>
+        <p className="title">
+          <Link to={`/shop/${item.id}`}> {item.title}</Link>
+        </p>
         <p
           className="remove"
           data-id={item.id}
