@@ -44,6 +44,7 @@ const App = () => {
   };
 
   const changeQuantity = (id, quantity) => {
+    if (quantity < 1) return;
     let newCart = cart.map((item) => {
       if (item.id === id) {
         return {

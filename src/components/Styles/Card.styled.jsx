@@ -9,7 +9,7 @@ export const StyledCard = styled.div`
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
-  margin-bottom: 15px;
+  margin: 0 2px 15px 2px;
 
   & .image-container {
     min-height: 70%;
@@ -36,7 +36,7 @@ export const StyledCard = styled.div`
     cursor: pointer;
     word-break: break-word;
     margin-bottom: 5px;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
   }
 
   & .title > a {
@@ -68,5 +68,15 @@ export const StyledCard = styled.div`
     & {
       width: 31%;
     }
+
+    .image-container {
+      min-height: 30%;
+      flex-shrink: 1;
+    }
+  }
+
+  @media (max-width: 620px) {
+    width: 170px;
+    height: 300px;
   }
 `;

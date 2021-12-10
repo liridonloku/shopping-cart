@@ -10,11 +10,9 @@ const Home = () => {
         <div className="left">
           <h2>Fake Store</h2>
           <p>Buy all the products</p>
-          <button>
-            <Link to="/shop" element={<Shop />}>
-              SHOP
-            </Link>
-          </button>
+          <Link to="/shop" element={<Shop />}>
+            <button>SHOP</button>
+          </Link>
         </div>
         <div className="right">
           <img src="https://fakestoreapi.com/icons/intro.svg" alt="intro svg" />
