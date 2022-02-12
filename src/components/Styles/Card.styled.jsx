@@ -11,8 +11,8 @@ export const StyledCard = styled.div`
   border-radius: 5px;
   margin: 0 2px 15px 2px;
 
-  & .image-container {
-    min-height: 70%;
+  .image-container {
+    min-height: 65%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -21,14 +21,14 @@ export const StyledCard = styled.div`
     flex: 1 1 auto;
   }
 
-  & div > img {
+  div > img {
     max-height: 100%;
     max-width: 100%;
     object-fit: cover;
     cursor: pointer;
   }
 
-  & .title {
+  .title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,27 +39,27 @@ export const StyledCard = styled.div`
     flex: 0 1 auto;
   }
 
-  & .title > a {
+  .title > a {
     text-decoration: none;
     color: black;
   }
 
-  & .title:hover {
+  .title:hover {
     text-decoration: underline;
   }
 
-  & .price {
+  .price {
     font-weight: bold;
     cursor: default;
   }
 
-  & .rating {
+  .rating {
     display: flex;
     align-items: center;
     cursor: default;
   }
 
-  & .rating > svg {
+  .rating > svg {
     margin-left: 3px;
     color: orange;
   }
